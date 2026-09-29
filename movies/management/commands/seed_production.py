@@ -175,7 +175,7 @@ class Command(BaseCommand):
                 "duration": 162,
                 "release_date": "2026-09-01",
                 "rating": "8.5",
-                "poster": "movies/avatar-poster.jpg",
+                "poster": "cinemitra/movies/avatar-poster.jpg",
             },
         )
 
