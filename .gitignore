@@ -21,7 +21,9 @@ staticfiles/
 .env.*
 
 # Uploaded media
-media/
+media/*
+!media/movies/
+!media/movies/avatar-poster.jpg
 
 # IDE
 .vscode/
