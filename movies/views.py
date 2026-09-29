@@ -92,11 +92,11 @@ class LoginView(APIView):
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
-    parser_classes ={
+    parser_classes =[
         MultiPartParser,
         FormParser,
         JSONParser,
-    }
+    ]
 
 class ShowViewSet(viewsets.ModelViewSet):
     queryset = Show.objects.all()
