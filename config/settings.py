@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 import dj_database_url
+from dotenv import load_dotenv
 
 
 # --------------------------------------------------
@@ -13,6 +14,8 @@ import dj_database_url
 # --------------------------------------------------
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / ".env")
 
 
 # --------------------------------------------------
@@ -48,8 +51,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "movies",
+    "cloudinary",
+    "cloudinary_storage",
 
+    "movies",
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
@@ -183,7 +188,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STORAGES = {
     "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
@@ -237,3 +242,10 @@ REST_FRAMEWORK = {
 # --------------------------------------------------
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    "API_KEY": os.environ.get("CLOUDINARY_API_KEY"),
+    "API_SECRET": os.environ.get("CLOUDINARY_API_SECRET"),
+    "PREFIX": "",
+}
