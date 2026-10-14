@@ -1,0 +1,358 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$Uq0arY7wxoOXNIzqdObs5v$QuJTrxcY9RVuErs3qP1OBA9XEajIPDsBNKxELdy1Wps=",
+    "last_login": "2026-09-29T14:48:01.127Z",
+    "is_superuser": true,
+    "username": "subhim",
+    "first_name": "",
+    "last_name": "",
+    "email": "subhimchhetri30@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-25T10:17:32Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$pKqAeeSA4p6j62ht605J25$SWHYAzZm57jWvERxFwk5rZEeK0yoUETdhniS6/5OUhY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "qfx_test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-27T08:08:04.375Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$prEG5Ihmhy9EBt44ztWLGf$yIHi6aBUSpzgQGMgEpvk4kwJZqhoUYv2w9MkrzoTkoY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testcustomer",
+    "first_name": "",
+    "last_name": "",
+    "email": "customer@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-27T10:08:08.297Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$YG1Ra4yWEpVre5mqOZlDR6$rXXbWsJFyMk74+PGYP7Se2fbereYUGh+Vo/fBReA5mc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "test@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-28T10:15:28.225Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$9dnu4mCGnHD7E9yRshk7jg$SvFvR+JLhrFYRa1j6WIagJeJwiFErxS2/ZjkBSESAEE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "vendor_test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-28T15:36:04.935Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "movies.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "qfx_test"
+    ],
+    "role": "VENDOR"
+  }
+},
+{
+  "model": "movies.userprofile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "role": "CUSTOMER"
+  }
+},
+{
+  "model": "movies.userprofile",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "subhim"
+    ],
+    "role": "ADMIN"
+  }
+},
+{
+  "model": "movies.userprofile",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "vendor_test"
+    ],
+    "role": "VENDOR"
+  }
+},
+{
+  "model": "movies.userprofile",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "testcustomer"
+    ],
+    "role": "CUSTOMER"
+  }
+},
+{
+  "model": "movies.vendor",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "qfx_test"
+    ],
+    "business_name": "QFX_Cinema",
+    "phone": "9856568956",
+    "approval_status": "APPROVED"
+  }
+},
+{
+  "model": "movies.vendor",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "vendor_test"
+    ],
+    "business_name": "vendor_test",
+    "phone": "9800000000",
+    "approval_status": "APPROVED"
+  }
+},
+{
+  "model": "movies.branch",
+  "pk": 1,
+  "fields": {
+    "vendor": 1,
+    "name": "QFX Civil Mall",
+    "city": "Kathmandu",
+    "address": "Civil Mall, Sundhara, Kathmandu"
+  }
+},
+{
+  "model": "movies.branch",
+  "pk": 2,
+  "fields": {
+    "vendor": 2,
+    "name": "QFX Trademall",
+    "city": "Pokhara",
+    "address": "Chipledhunga, Pokhara"
+  }
+},
+{
+  "model": "movies.hall",
+  "pk": 1,
+  "fields": {
+    "branch": 1,
+    "name": "Hall 2",
+    "capacity": 50
+  }
+},
+{
+  "model": "movies.hall",
+  "pk": 2,
+  "fields": {
+    "branch": 2,
+    "name": "East Hall",
+    "capacity": 80
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 1,
+  "fields": {
+    "hall": 1,
+    "row": "A",
+    "number": 1,
+    "seat_type": "STANDARD"
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 2,
+  "fields": {
+    "hall": 1,
+    "row": "A",
+    "number": 2,
+    "seat_type": "STANDARD"
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 3,
+  "fields": {
+    "hall": 1,
+    "row": "A",
+    "number": 3,
+    "seat_type": "PREMIUM"
+  }
+},
+{
+  "model": "movies.seat",
+  "pk": 4,
+  "fields": {
+    "hall": 2,
+    "row": "A",
+    "number": 1,
+    "seat_type": "STANDARD"
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 6,
+  "fields": {
+    "title": "Avatar",
+    "description": "A science fiction adventure movie.",
+    "genre": "Science Fiction",
+    "duration": 162,
+    "release_date": "2026-09-01",
+    "rating": "8.5",
+    "poster": "cinemitra/movies/avatar-poster.jpg"
+  }
+},
+{
+  "model": "movies.show",
+  "pk": 1,
+  "fields": {
+    "movie": 6,
+    "hall": 1,
+    "show_date": "2026-09-27",
+    "start_time": "17:00:00",
+    "ticket_price": "350.00",
+    "is_active": true
+  }
+},
+{
+  "model": "movies.showseat",
+  "pk": 10,
+  "fields": {
+    "show": 1,
+    "seat": 1,
+    "status": "BOOKED",
+    "price": "350.00"
+  }
+},
+{
+  "model": "movies.showseat",
+  "pk": 11,
+  "fields": {
+    "show": 1,
+    "seat": 2,
+    "status": "AVAILABLE",
+    "price": "350.00"
+  }
+},
+{
+  "model": "movies.showseat",
+  "pk": 12,
+  "fields": {
+    "show": 1,
+    "seat": 3,
+    "status": "AVAILABLE",
+    "price": "350.00"
+  }
+},
+{
+  "model": "movies.booking",
+  "pk": 3,
+  "fields": {
+    "customer": [
+      "test"
+    ],
+    "show": 1,
+    "booking_code": "CM-YNSFT4Z5XV",
+    "total_amount": "350.00",
+    "status": "PENDING",
+    "payment_status": "PENDING",
+    "created_at": "2026-09-30T01:53:20.617Z"
+  }
+},
+{
+  "model": "movies.bookingseat",
+  "pk": 4,
+  "fields": {
+    "booking": 3,
+    "show_seat": 10,
+    "price": "350.00"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "54c670b6597f2e2671a105bd42c2bee5859647db",
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "created": "2026-09-28T10:15:29.349Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "7bf65d52e0d667fe8f57e60e08dc2c70a74c58b3",
+  "fields": {
+    "user": [
+      "vendor_test"
+    ],
+    "created": "2026-09-28T15:36:18.481Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "b7ca998dae0e61ea344a2ccf2be718616f886d01",
+  "fields": {
+    "user": [
+      "testcustomer"
+    ],
+    "created": "2026-09-27T10:08:08.793Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "e6507518732e5df00ba16cb766371e5746477e34",
+  "fields": {
+    "user": [
+      "subhim"
+    ],
+    "created": "2026-09-28T14:49:11.990Z"
+  }
+}
+]

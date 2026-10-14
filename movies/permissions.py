@@ -15,3 +15,18 @@ class IsVendor(BasePermission):
             return request.user.userprofile.role == "VENDOR"
         except Exception:
             return False
+
+class IsAdmin(BasePermission):
+    """
+    Allows access only to authenticated users
+    whose UserProfile role is Admin
+    """
+
+    def has_permission(self, request, view):
+        if not request.user or not request.user.is_authenticated:
+            return False
+
+        try:
+            return request.user.userprofile.role == "ADMIN"
+        except Exception:
+            return False

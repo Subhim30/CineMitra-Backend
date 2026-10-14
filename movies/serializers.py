@@ -131,6 +131,16 @@ class BookingSerializer(serializers.ModelSerializer):
         read_only=True
     )
 
+    vendor_name = serializers.CharField(
+        source="show.hall.branch.vendor.business_name",
+        read_only=True
+    )
+
+    branch_name = serializers.CharField(
+        source="show.hall.branch.name",
+        read_only=True
+    )
+
     show_date = serializers.DateField(
         source="show.show_date",
         read_only=True
@@ -153,6 +163,8 @@ class BookingSerializer(serializers.ModelSerializer):
             "booking_code",
             "show",
             "movie_title",
+            "vendor_name",
+            "branch_name",
             "show_date",
             "start_time",
             "hall_name",
